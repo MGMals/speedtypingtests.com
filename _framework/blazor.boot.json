@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TestTypingSpeeds1",
   "resources": {
-    "hash": "sha256-ZV0dyJfbSDXK71q8dXcVus2xPriLGOmbP4zx1p9AGSk=",
+    "hash": "sha256-GmDnLESD7UIemrYk6JiepUZOwDYmx4Fb0s6aoH9Whfs=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-sn/g61GjVPhViOYQDkq1OMlk0eyS9r2Hi0qgU2o0HIU="
     },
@@ -153,7 +153,7 @@
       "System.wasm": "sha256-T4iprIGorUAo1X44AS78i81rjTVY995cbd5O+yc1VDY=",
       "netstandard.wasm": "sha256-Hn07E7cFp+95wLdaI9xd00BO31EV1GlMBzwoy8x9fao=",
       "System.Private.CoreLib.wasm": "sha256-h9bMm0S9rAi2/fHRdqXvhP9dUDIHzVw0qoQHdjjD6Xk=",
-      "TestTypingSpeeds1.wasm": "sha256-aTsqhj5+kXJ4ELwkZFVg3YhSfsbCtWETBGLBEoNk/rI="
+      "TestTypingSpeeds1.wasm": "sha256-2WE6l5A2e5zLWRei53vgKgw29i9ldHnOHwo0U6jlv7g="
     }
   },
   "cacheBootResources": true,
