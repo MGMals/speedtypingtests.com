@@ -3899,15 +3899,19 @@ Section Title
     font-size: 18px;
 
 }
-/*.service-block .inner-box .content-box .text {
-  font-weight: 400;
-  line-height: 17px;
-  text-transform:none;
-  margin-bottom: 5px;
-  padding-right: 5px;
-    font-size: 16px;
-
-}*/
+.new-badge {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    background: #ff4757;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    z-index: 2;
+}
 .service-block .text {
     font-weight: 400;
     line-height: 1.6;
@@ -3993,6 +3997,8 @@ Section Title
   transition: 0.3s ease;
   z-index: 0;
 }
+
+
 /*** 
 
 ====================================================================
@@ -5612,10 +5618,7 @@ Section Title
 
 ***/
 
-.faq-wrapper {
-    max-width: auto;
-    margin: auto;
-}
+
 
 .faq-title {
     text-align: center;
