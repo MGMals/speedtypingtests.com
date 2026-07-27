@@ -2883,7 +2883,6 @@ Section Title
     max-width: 970px; 
     height: 100px; /* compact height */
     background-color: #f0f0f0;
-    border: 6px dashed #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2899,7 +2898,7 @@ Section Title
 .ad-placeholder-wide {
     width: 728px;
     height: 100px;
-    border: 6px dashed #ccc;
+    border: 0px dashed #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11813,7 +11812,6 @@ Sidebar
     max-width: 300px;
     height: 600px;
     background-color: #f0f0f0;
-    border: 6px dashed #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11831,7 +11829,6 @@ Sidebar
     max-width: 300px;
     height: 100px; /* compact height */
     background-color: #f0f0f0;
-    border: 6px dashed #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
