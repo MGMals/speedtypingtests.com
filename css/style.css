@@ -7784,14 +7784,16 @@ Section Title
     position: relative;
     background-color: #282828;
     flex-shrink: 0;
+    display: block;
+    min-height: 250px;
     /* Widget Section */
 }
 
 
 
 .main-footer .widgets-section {
-  position: relative;
-  padding: 100px 0 10px;
+    position: relative;
+    padding: 100px 0 10px;
 }
 .main-footer .footer-column {
   position: relative;
