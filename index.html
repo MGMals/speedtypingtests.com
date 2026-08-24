@@ -91,6 +91,30 @@
     </script>
     <script src="_framework/blazor.webassembly.js"></script>
 
+<script>
+    function removeLoginDebugText() {
+        document.querySelectorAll("p").forEach(function (p) {
+            if (p.textContent.includes("Doesn't open Password Page locally")) {
+                p.remove();
+            }
+        });
+    }
+
+    // Run once after Blazor loads
+    setTimeout(removeLoginDebugText, 1000);
+
+    // Also catch the login page when navigating inside the Blazor app
+    const observer = new MutationObserver(function () {
+        removeLoginDebugText();
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+</script>
+
+    
     <script>
         window.scrollToTop = () => {
             window.scrollTo({
