@@ -222,6 +222,8 @@ If you are just starting your typing journey, the right habits can help you impr
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
+                updateStaticAuthMenu();
+
             });
 
 
