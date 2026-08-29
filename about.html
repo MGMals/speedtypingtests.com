@@ -444,6 +444,8 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
+                updateStaticAuthMenu();
+
             });
 
 
