@@ -2,94 +2,1235 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="xxxxx" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <meta name="google-site-verification"
+          content="xxxxx" />
+
+
+    <!-- =====================================================
+         SEO
+    ====================================================== -->
+
+    <title>
+        Free Typing Speed Test - Improve WPM & Accuracy | SpeedTypingTests
+    </title>
+
     <meta name="description"
-          content="Free typing speed tests to improve your WPM, typing accuracy, and keyboard skills with timed typing tests and typing stories.">
+          content="Practice free typing speed tests online. Improve your WPM, typing accuracy, and keyboard skills with timed typing tests, typing stories, and detailed performance reports." />
 
-    <meta name="robots" content="index,follow">
+    <meta name="keywords"
+          content="typing test, typing speed test, WPM test, typing practice, typing games, free typing test" />
 
-    <meta name="theme-color" content="#2ab6f7">
+    <meta name="robots"
+          content="index,follow" />
 
-    <title>SpeedTypingTests | Free Typing Speed Tests</title>
+    <link rel="canonical"
+          href="https://speedtypingtests.com/" />
+
+    <meta name="theme-color"
+          content="#2ab6f7" />
+
+
+    <!-- =====================================================
+         BASE
+    ====================================================== -->
+
     <base href="/" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="SpeedTyingTests" />
-    <link rel="manifest" href="/site.webmanifest" />
 
 
+    <!-- =====================================================
+         FAVICONS
+    ====================================================== -->
 
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>-->
-    <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+    <link rel="icon"
+          href="/favicon.ico"
+          type="image/x-icon">
 
-    <!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/progressChart.js"></script>
-    <script src="js/progress-bar.js"></script>-->
+    <link rel="icon"
+          type="image/png"
+          href="/images/favicon-96x96.png"
+          sizes="96x96" />
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon.svg" />
+
+    <link rel="shortcut icon"
+          href="/favicon.ico" />
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/images/apple-touch-icon.png" />
+
+    <meta name="apple-mobile-web-app-title"
+          content="SpeedTypingTests" />
+
+    <link rel="manifest"
+          href="/site.webmanifest" />
 
 
-    <!--//google adsense-->
-    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1717098406358580"
-            crossorigin="anonymous"></script>-->
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
 
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/flaticon.css">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/fontawesome.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet" />
+    <link href="/css/bootstrap/bootstrap.min.css"
+          rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="/css/animate.css"
+          rel="stylesheet">
+
+    <link href="/css/flaticon.css"
+          rel="stylesheet">
+
+    <link href="/css/style.css"
+          rel="stylesheet">
+
+    <link href="/css/fontawesome.css"
+          rel="stylesheet">
+
+    <link href="/css/app.css"
+          rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+          rel="stylesheet">
 
 
-    <!-- Responsive -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+
+    <!-- =====================================================
+         STARTUP OVERLAY
+
+         This hides the visible Blazor DOM replacement.
+    ====================================================== -->
+
+    <style>
+
+        #blazor-startup-overlay {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            z-index: 999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+        }
+
+            #blazor-startup-overlay.hide {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+        .startup-content {
+            text-align: center;
+        }
+
+        .startup-logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 22px;
+        }
+
+            .startup-logo span {
+                color: #2ab6f7;
+            }
+
+        .startup-spinner {
+            width: 42px;
+            height: 42px;
+            margin: 0 auto;
+            border: 4px solid #e5e5e5;
+            border-top-color: #2ab6f7;
+            border-radius: 50%;
+            animation: startup-spin 0.7s linear infinite;
+        }
+
+        @keyframes startup-spin {
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            margin-left: 2rem;
+            flex-wrap: nowrap;
+        }
+
+
+        @media (max-width: 768px) {
+
+            .logo-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-left: 0 !important;
+                gap: 0.75rem;
+            }
+
+                .footer-links li {
+                    text-align: center;
+                }
+        }
+    </style>
+
+
+    <!-- =====================================================
+         FAQ SCHEMA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is a good typing speed?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A good typing speed is usually 40–60 WPM. Professional typists often reach 70+ WPM with strong accuracy."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How can I improve my typing speed?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Practice daily, focus on accuracy first, and avoid looking at the keyboard. Consistency matters more than speed at the start."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Why is typing accuracy important?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Accuracy helps reduce mistakes and increases real-world productivity, especially in office and remote jobs."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What jobs require fast typing skills?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Jobs like data entry, customer support, transcription, virtual assistant, and chat support all rely on fast typing."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can typing skills help me get a remote job?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Many remote jobs require strong typing skills for communication, documentation, and customer interaction."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How is WPM calculated?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "WPM, or words per minute, measures how many words you type during a selected period of time, typically adjusted for typing errors."
+                    }
+                }
+            ]
+        }
+    </script>
+
+
+    <!-- =====================================================
+         WEBSITE SCHEMA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "SpeedTypingTests",
+            "url": "https://speedtypingtests.com/",
+            "description": "Free typing speed tests to improve WPM, accuracy and keyboard skills."
+        }
+    </script>
+
+
+    <!-- =====================================================
+         ORGANIZATION SCHEMA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "SpeedTypingTests",
+            "url": "https://speedtypingtests.com/",
+            "description": "Free online typing tests that help users improve typing speed, accuracy, and WPM."
+        }
+    </script>
+
+
+    <!-- =====================================================
+         ADSENSE
+
+         Leave commented until ready.
+    ====================================================== -->
+    <!--
+    <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1717098406358580"
+            crossorigin="anonymous">
+    </script>
+    -->
+
 </head>
 
 
-
 <body>
-    <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
+
+
+    <!-- =====================================================
+         STARTUP SCREEN
+    ====================================================== -->
+
+    <div id="blazor-startup-overlay">
+
+        <div class="startup-content">
+
+            <div class="startup-logo">
+                Speed<span>Typing</span>Tests<span>.com</span>
+            </div>
+
+            <div class="startup-spinner"></div>
+
+        </div>
+
     </div>
+
+
+
+    <!-- =====================================================
+         BLAZOR ROOT
+
+         This content exists in the original HTML response.
+
+         When Blazor starts successfully it replaces everything
+         inside #app.
+    ====================================================== -->
+
+    <div id="app">
+
+
+        <!-- =================================================
+             STATIC HEADER
+        ================================================== -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <div class="container">
+
+
+                <div class="site-logo-logo-box">
+
+                    <div class="logo">
+
+                        <a href="/"
+                           class="site-logo">
+
+                            Speed<span>Typing</span>Tests<span>.com</span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MOBILE TOGGLER -->
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navMenu"
+                        aria-controls="navMenu"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <!-- MENU -->
+
+                <div class="collapse navbar-collapse"
+                     id="navMenu">
+
+                    <ul class="navbar-nav ms-auto align-items-center">
+
+
+                        <li class="nav-item me-3">
+
+                            <a class="nav-link"
+                               href="/">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item me-3">
+
+                            <a class="nav-link"
+                               href="/typing">
+
+                                <i class="bi bi-lightning-charge"></i>
+
+                                <span>
+                                    Typing Tests
+                                </span>
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item me-3">
+
+                            <a class="nav-link"
+                               href="StoryTypingMain.html">
+
+                                <i class="bi bi-search"></i>
+
+                                <span>
+                                    Story Mode
+                                </span>
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               href="TypingTipsMain.html">
+
+                                <i class="bi bi-journal-text"></i>
+
+                                <span>
+                                    Blog / Articles
+                                </span>
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               href="LeaderBoard.html">
+
+                                <i class="fas fa-crown"></i>
+
+                                <span>
+                                    Leaderboard
+                                </span>
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item me-3">
+
+                            <a class="theme-btn ms-lg-3"
+                               href="/login">
+
+                                Sign Up / Login
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+
+        <!-- =================================================
+             STATIC HOMEPAGE CONTENT
+        ================================================== -->
+
+        <main class="page-content">
+
+            <div class="container mt-4">
+
+
+                <!-- HERO -->
+
+                <section class="text-center py-5">
+
+                    <h1 class="hero-title">
+
+                        Learn To Type Faster
+
+                        <span style="color:#2ab6f7;">
+                            for Free
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero-subtitle mt-3">
+
+                        Improve your typing speed, accuracy, and confidence with
+                        free timed typing tests, typing stories, and practical typing tips.
+
+                    </p>
+
+
+                    <div class="mt-4">
+
+                        <a href="/typing"
+                           class="theme-btn">
+
+                            Start Typing Test
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+         TYPING TESTS
+    ================================================== -->
+
+                <section class="py-4">
+
+                    <div class="text-center mb-4">
+
+                        <h2 class="hero-title">
+                            Free Typing Tests
+                        </h2>
+
+                        <p class="hero-subtitle">
+
+                            Choose a test length and see how fast and accurately you can type.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="row g-4">
+
+
+                        <!-- 30 SECOND -->
+
+                        <div class="col-lg-3 col-md-6">
+
+                            <div class="p-4 text-center border rounded h-100">
+
+                                <h3>
+                                    30 Seconds
+                                </h3>
+
+                                <p>
+                                    A quick typing challenge to test your speed and accuracy.
+                                </p>
+
+                                <a href="/typing?time=30"
+                                   class="theme-btn">
+
+                                    Start Test
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- 1 MINUTE -->
+
+                        <div class="col-lg-3 col-md-6">
+
+                            <div class="p-4 text-center border rounded h-100">
+
+                                <h3>
+                                    1 Minute
+                                </h3>
+
+                                <p>
+                                    Measure your WPM with a classic one-minute typing test.
+                                </p>
+
+                                <a href="/typing?time=60"
+                                   class="theme-btn">
+
+                                    Start Test
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- 3 MINUTES -->
+
+                        <div class="col-lg-3 col-md-6">
+
+                            <div class="p-4 text-center border rounded h-100">
+
+                                <h3>
+                                    3 Minutes
+                                </h3>
+
+                                <p>
+                                    Build endurance while maintaining typing accuracy.
+                                </p>
+
+                                <a href="/typing?time=180"
+                                   class="theme-btn">
+
+                                    Start Test
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- 5 MINUTES -->
+
+                        <div class="col-lg-3 col-md-6">
+
+                            <div class="p-4 text-center border rounded h-100">
+
+                                <h3>
+                                    5 Minutes
+                                </h3>
+
+                                <p>
+                                    Test your typing consistency over a longer session.
+                                </p>
+
+                                <a href="/typing?time=300"
+                                   class="theme-btn">
+
+                                    Start Test
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+         STORY TYPING
+    ================================================== -->
+
+                <section class="py-5">
+
+                    <div class="text-center mb-4">
+
+                        <h2 class="hero-title">
+
+                            Story Typing Challenges
+
+                        </h2>
+
+                        <p class="hero-subtitle">
+
+                            Practice typing while following fun mystery and technology stories.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="row g-4">
+
+
+                        <div class="col-lg-4 col-md-6">
+
+                            <div class="p-4 border rounded h-100">
+
+                                <h3>
+                                    The Stolen Championship Ring
+                                </h3>
+
+                                <p>
+                                    Solve the mystery while testing your typing speed.
+                                </p>
+
+                                <a href="/storytypingmain">
+                                    Start Story →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-lg-4 col-md-6">
+
+                            <div class="p-4 border rounded h-100">
+
+                                <h3>
+                                    The Fake CEO
+                                </h3>
+
+                                <p>
+                                    Follow the clues and type your way through the investigation.
+                                </p>
+
+                                <a href="/storytypingmain">
+                                    Start Story →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-lg-4 col-md-6">
+
+                            <div class="p-4 border rounded h-100">
+
+                                <h3>
+                                    The AI That Predicted the Future
+                                </h3>
+
+                                <p>
+                                    A longer typing story designed to challenge your endurance.
+                                </p>
+
+                                <a href="/storytypingmain">
+                                    Start Story →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+         WHY PRACTICE
+    ================================================== -->
+
+                <section class="py-5">
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-10">
+
+                            <h2 class="hero-title text-center mb-4">
+
+                                Why Practice Typing?
+
+                            </h2>
+
+
+                            <p>
+
+                                Faster typing can make everyday computer work easier and more efficient.
+                                Whether you're writing emails, studying, coding, working remotely,
+                                or creating content, improving your typing skills can reduce the time
+                                it takes to turn your thoughts into written words.
+
+                            </p>
+
+
+                            <p>
+
+                                Good typing is not only about speed. Accuracy, consistency,
+                                proper finger placement, and comfort are equally important.
+                                Regular practice can help develop muscle memory so typing becomes
+                                more natural over time.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+         TYPING TIPS
+    ================================================== -->
+
+                <section class="py-5">
+
+                    <div class="text-center mb-4">
+
+                        <h2 class="hero-title">
+
+                            Latest Typing Tips
+
+                        </h2>
+
+                        <p class="hero-subtitle">
+
+                            Learn how to improve your WPM, accuracy, and keyboard habits.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="row g-4">
+
+
+                        <!-- ARTICLE 1 -->
+
+                        <div class="col-lg-4 col-md-6">
+
+                            <div class="p-4 border rounded h-100">
+
+                                <h3>
+
+                                    <a href="/what-is-good-typing-speed-2026.html">
+
+                                        What Is a Good Typing Speed in 2026?
+
+                                    </a>
+
+                                </h3>
+
+                                <p>
+
+                                    Learn how average, good, professional, and advanced
+                                    typing speeds compare.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ARTICLE 2 -->
+
+                        <div class="col-lg-4 col-md-6">
+
+                            <div class="p-4 border rounded h-100">
+
+                                <h3>
+
+                                    <a href="/top-10-typing-practice-tips-for-beginners.html">
+
+                                        Top 10 Typing Practice Tips for Beginners
+
+                                    </a>
+
+                                </h3>
+
+                                <p>
+
+                                    Build better typing habits with simple techniques
+                                    for speed and accuracy.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ARTICLE 3 -->
+
+                        <div class="col-lg-4 col-md-6">
+
+                            <div class="p-4 border rounded h-100">
+
+                                <h3>
+
+                                    <a href="/is-100-wpm-good-the-truth-about-fast-typing.html">
+
+                                        Is 100 WPM Good?
+
+                                    </a>
+
+                                </h3>
+
+                                <p>
+
+                                    See how 100 WPM compares with average and professional
+                                    typing speeds.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="text-center mt-4">
+
+                        <a href="TypingTipsMain.html"
+                           class="theme-btn">
+
+                            View All Typing Tips
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+         ABOUT
+    ================================================== -->
+
+                <section class="py-5">
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-10 text-center">
+
+                            <h2 class="hero-title">
+
+                                About SpeedTypingTests
+
+                            </h2>
+
+
+                            <p class="hero-subtitle">
+
+                                SpeedTypingTests provides free typing tests and practice tools
+                                designed to help users improve typing speed, accuracy,
+                                confidence, and keyboard skills.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- CONTACT CTA -->
+
+                <section class="contact-banner w-100"
+                         style="background-color:purple;">
+
+                    <div class="container">
+
+                        <div class="d-flex justify-content-between align-items-center py-4 contact-banner-inner">
+
+                            <h3 class="title m-0 text-white">
+                                Have Any Questions?
+                            </h3>
+
+                            <a href="/contact.html"
+                               class="theme-btn-v2">
+
+                                Contact Us
+
+                                <i class="flaticon-arrow-pointing-to-right btn-icon ms-2"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    </section>
+            </div>
+
+        </main>
+
+
+
+        <!-- =================================================
+             STATIC FOOTER
+        ================================================== -->
+
+        <footer class="main-footer">
+
+
+            <!-- WIDGET SECTION -->
+
+            <div class="widgets-section">
+
+                <div class="auto-container">
+
+                    <div class="row align-items-center">
+
+                        <div class="logo-box d-flex align-items-center justify-content-center flex-nowrap">
+
+
+                            <!-- LOGO -->
+
+                            <div class="logo">
+
+                                <a href="/"
+                                   class="site-logo">
+
+                                    Speed<span>Typing</span>Tests<span>.com</span>
+
+                                </a>
+
+                            </div>
+
+
+
+                            <!-- FOOTER LINKS -->
+
+                            <ul class="footer-links">
+
+
+                                <li>
+
+                                    <a href="/about.html"
+                                       style="color:white;">
+
+                                        About Us
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="/privacy.html"
+                                       style="color:white;">
+
+                                        Privacy Policy
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="/terms.html"
+                                       style="color:white;">
+
+                                        Terms of Use
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="/contact.html"
+                                       style="color:white;">
+
+                                        Contact Us
+
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+                <div class="auto-container">
+
+                    <div class="inner-container">
+
+                        <div class="copyright-text"
+                             style="color:white;">
+
+                            © 2026 Copyright reserved by Sekani Ventures LLC
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SCROLL TO TOP -->
+
+            <div class="scroll-to-top scroll-to-target arrow-btn"
+                 onclick="window.scrollTo({top:0, behavior:'smooth'})"
+                 data-target="html">
+
+                <i class="fa-sharp fa-solid fa-arrow-up"></i>
+
+            </div>
+
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BLAZOR ERROR UI
+    ====================================================== -->
 
     <div id="blazor-error-ui">
+
         An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
+
+        <a href=""
+           class="reload">
+
+            Reload
+
+        </a>
+
+        <a class="dismiss">
+            🗙
+        </a>
+
     </div>
 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/wow.js"></script>
-    <script src="js/appear.js"></script>
-    <script src="js/mixitup.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/site.js"></script>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+    <!-- Bootstrap -->
+
+    <script src="/js/bootstrap.min.js"></script>
+
+
+    <!-- Your custom JS -->
+
+    <script src="/js/site.js"></script>
+
+
+
+    <!-- =====================================================
+         GITHUB PAGES REDIRECT RECOVERY
+    ====================================================== -->
 
     <script>
-    (function () {
-        var redirect = sessionStorage.redirect;
 
-        delete sessionStorage.redirect;
+        (function () {
 
-        if (redirect && redirect !== location.href) {
-            history.replaceState(null, null, redirect);
-        }
-    })();
+            var redirect = sessionStorage.redirect;
+
+            delete sessionStorage.redirect;
+
+            if (
+                redirect &&
+                redirect !== location.href
+            ) {
+
+                history.replaceState(
+                    null,
+                    null,
+                    redirect
+                );
+
+            }
+
+        })();
+
     </script>
-    <script src="_framework/blazor.webassembly.js"></script>
+
+
+
+    <!-- =====================================================
+         BLAZOR
+
+         IMPORTANT:
+         autostart is OFF.
+
+         We start Blazor manually so that we can control when
+         the startup screen disappears.
+    ====================================================== -->
+
+    <script src="_framework/blazor.webassembly.js"
+            autostart="false"></script>
+
+
+
+    <!-- =====================================================
+         START BLAZOR
+    ====================================================== -->
 
 <script>
     function removeLoginDebugText() {
@@ -116,62 +1257,232 @@
 
     
     <script>
-        window.scrollToTop = () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        };
+
+        (async function () {
+
+            const overlay =
+                document.getElementById(
+                    "blazor-startup-overlay"
+                );
+
+            try {
+
+                await Blazor.start();
+
+
+                /*
+                 * Give Blazor's first rendered frame time to
+                 * reach the browser before removing the overlay.
+                 *
+                 * This avoids showing the static -> Blazor
+                 * replacement.
+                 */
+
+                requestAnimationFrame(function () {
+
+                    requestAnimationFrame(function () {
+
+                        setTimeout(function () {
+
+                            if (overlay) {
+
+                                overlay.classList.add("hide");
+
+                                setTimeout(function () {
+
+                                    if (overlay) {
+                                        overlay.remove();
+                                    }
+
+                                }, 250);
+
+                            }
+
+                        }, 75);
+
+                    });
+
+                });
+
+            }
+            catch (error) {
+
+                console.error(
+                    "Blazor failed to start:",
+                    error
+                );
+
+
+                /*
+                 * If Blazor fails, remove the overlay so visitors
+                 * can still see and use the static homepage.
+                 */
+
+                if (overlay) {
+
+                    overlay.classList.add("hide");
+
+                    setTimeout(function () {
+
+                        overlay.remove();
+
+                    }, 250);
+
+                }
+
+            }
+
+        })();
+
     </script>
 
-    <!--<div id="modal-root"></div>-->
 
 
+    <!-- =====================================================
+         SCROLL TO TOP
+    ====================================================== -->
 
     <script>
+
+        window.scrollToTop = () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        };
+
+    </script>
+
+
+
+    <!-- =====================================================
+         SHARE CHALLENGE
+    ====================================================== -->
+
+    <script>
+
         async function shareChallenge(url, text) {
 
             try {
+
                 if (navigator.share) {
+
                     await navigator.share({
+
                         title: "Typing Challenge",
+
                         text: text,
+
                         url: url
+
                     });
 
-                    // user successfully shared or closed share sheet
-                    window.dispatchEvent(new Event("shareClosed"));
+
+                    window.dispatchEvent(
+                        new Event("shareClosed")
+                    );
+
                 }
                 else {
-                    await navigator.clipboard.writeText(url);
-                    alert("Link copied! Share it with your friends.");
-                    window.dispatchEvent(new Event("shareClosed"));
+
+                    await navigator.clipboard.writeText(
+                        url
+                    );
+
+
+                    alert(
+                        "Link copied! Share it with your friends."
+                    );
+
+
+                    window.dispatchEvent(
+                        new Event("shareClosed")
+                    );
+
                 }
+
             }
             catch (err) {
-                console.log("Share cancelled or failed", err);
-                window.dispatchEvent(new Event("shareClosed"));
+
+                console.log(
+                    "Share cancelled or failed",
+                    err
+                );
+
+
+                window.dispatchEvent(
+                    new Event("shareClosed")
+                );
+
             }
+
         }
+
     </script>
 
+
+
+    <!-- =====================================================
+         SHARE LISTENER
+    ====================================================== -->
+
     <script>
+
         function registerShareListener(dotnetRef) {
-            window.addEventListener("shareClosed", () => {
-                dotnetRef.invokeMethodAsync("OnShareClosed");
-            });
+
+            window.addEventListener(
+                "shareClosed",
+                function () {
+
+                    dotnetRef.invokeMethodAsync(
+                        "OnShareClosed"
+                    );
+
+                }
+            );
+
         }
+
     </script>
+
+
+
+    <!-- =====================================================
+         MODAL SUPPORT
+    ====================================================== -->
+
     <script>
-    window.blazorModal = {
-        moveToBody: function (element) {
-            const root = document.getElementById("modal-root");
-            if (element && root) {
-                root.appendChild(element);
+
+        window.blazorModal = {
+
+            moveToBody: function (element) {
+
+                const root =
+                    document.getElementById(
+                        "modal-root"
+                    );
+
+
+                if (element && root) {
+
+                    root.appendChild(
+                        element
+                    );
+
+                }
+
             }
-        }
-    };
+
+        };
+
     </script>
+
 
 </body>
+
 </html>

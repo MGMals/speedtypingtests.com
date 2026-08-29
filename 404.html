@@ -2,150 +2,579 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="xxxxx" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <title>Page Not Found | SpeedTypingTests</title>
+
     <meta name="description"
-          content="Free typing speed tests to improve your WPM, typing accuracy, and keyboard skills with timed typing tests and typing stories.">
+          content="The page you requested could not be found. Return to SpeedTypingTests to practice your typing speed, accuracy, and WPM." />
 
-    <meta name="robots" content="index,follow">
+    <!-- Do NOT index error pages -->
+    <meta name="robots" content="noindex,follow" />
 
-    <meta name="theme-color" content="#2ab6f7">
+    <meta name="theme-color" content="#2ab6f7" />
 
-    <title>SpeedTypingTests | Free Typing Speed Tests</title>
     <base href="/" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="SpeedTyingTests" />
-    <link rel="manifest" href="/site.webmanifest" />
 
 
+    <!-- =====================================================
+         FAVICONS
+    ====================================================== -->
 
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>-->
-    <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+    <link rel="icon"
+          href="/favicon.ico"
+          type="image/x-icon" />
 
-    <!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/progressChart.js"></script>
-    <script src="js/progress-bar.js"></script>-->
-    <!--//google adsense-->
-    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1717098406358580"
-            crossorigin="anonymous"></script>-->
+    <link rel="icon"
+          type="image/png"
+          href="/images/favicon-96x96.png"
+          sizes="96x96" />
 
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/flaticon.css">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/fontawesome.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet" />
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon.svg" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/images/apple-touch-icon.png" />
+
+    <meta name="apple-mobile-web-app-title"
+          content="SpeedTypingTests" />
+
+    <link rel="manifest"
+          href="/site.webmanifest" />
 
 
-    <!-- Responsive -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link href="/css/bootstrap/bootstrap.min.css"
+          rel="stylesheet" />
+
+    <link href="/css/style.css"
+          rel="stylesheet" />
+
+    <link href="/css/app.css"
+          rel="stylesheet" />
+
+    <link href="/css/fontawesome.css"
+          rel="stylesheet" />
+
+    <link href="/css/flaticon.css"
+          rel="stylesheet" />
+
+    <link href="/css/animate.css"
+          rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+          rel="stylesheet" />
+
+
+    <style>
+
+        /*
+        =====================================================
+        STARTUP OVERLAY
+        =====================================================
+        */
+
+        #blazor-startup-overlay {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            z-index: 999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+        }
+
+
+            #blazor-startup-overlay.hide {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+
+        .startup-content {
+            text-align: center;
+        }
+
+
+        .startup-logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 22px;
+        }
+
+
+            .startup-logo span {
+                color: #2ab6f7;
+            }
+
+
+        .startup-spinner {
+            width: 42px;
+            height: 42px;
+            margin: 0 auto;
+            border: 4px solid #e5e5e5;
+            border-top-color: #2ab6f7;
+            border-radius: 50%;
+            animation: startup-spin 0.7s linear infinite;
+        }
+
+
+        @keyframes startup-spin {
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /*
+        =====================================================
+        FALLBACK 404
+        =====================================================
+        */
+
+        .not-found-page {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+
+        .not-found-content {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+
+        .not-found-code {
+            font-size: 90px;
+            line-height: 1;
+            font-weight: 800;
+            color: #2ab6f7;
+            margin-bottom: 10px;
+        }
+
+
+        .not-found-title {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+
+        .not-found-text {
+            font-size: 17px;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+
+        .not-found-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+
+        .not-found-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            background: #2ab6f7;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+
+            .not-found-btn:hover {
+                opacity: 0.9;
+                color: #ffffff;
+            }
+
+
+        .not-found-btn-secondary {
+            background: #212529;
+        }
+
+
+        #blazor-error-ui {
+            display: none;
+        }
+    </style>
+
 </head>
 
 
-
 <body>
-    <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
+
+
+    <!-- =====================================================
+         SMOOTH BLAZOR STARTUP
+    ====================================================== -->
+
+    <div id="blazor-startup-overlay">
+
+        <div class="startup-content">
+
+            <div class="startup-logo">
+                Speed<span>Typing</span>Tests<span>.com</span>
+            </div>
+
+            <div class="startup-spinner"></div>
+
+        </div>
+
     </div>
+
+
+
+    <!-- =====================================================
+         BLAZOR APP
+    ====================================================== -->
+
+    <div id="app">
+
+
+        <!--
+            This is fallback content.
+
+            If the URL is a valid Blazor route,
+            Blazor will replace this content.
+
+            If Blazor cannot start, visitors still
+            receive a useful page.
+        -->
+
+        <main class="not-found-page">
+
+            <div class="not-found-content">
+
+                <div class="not-found-code">
+                    404
+                </div>
+
+                <h1 class="not-found-title">
+                    Page Not Found
+                </h1>
+
+                <p class="not-found-text">
+                    Sorry, we couldn't find the page you're looking for.
+                    The page may have moved, been removed, or the address
+                    may have been entered incorrectly.
+                </p>
+
+                <div class="not-found-buttons">
+
+                    <a href="/"
+                       class="not-found-btn">
+
+                        <i class="bi bi-house me-1"></i>
+                        Back to Home
+
+                    </a>
+
+
+                    <a href="/typing"
+                       class="not-found-btn not-found-btn-secondary">
+
+                        <i class="bi bi-lightning-charge me-1"></i>
+                        Take a Typing Test
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BLAZOR ERROR UI
+    ====================================================== -->
 
     <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
+
+        An unexpected error has occurred.
+
+        <a href=""
+           class="reload">
+            Reload
+        </a>
+
+        <a class="dismiss">
+            🗙
+        </a>
+
     </div>
 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/wow.js"></script>
-    <script src="js/appear.js"></script>
-    <script src="js/mixitup.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/site.js"></script>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="/js/site.js"></script>
+
+
+
+    <!-- =====================================================
+         RESTORE ORIGINAL URL
+         Keep this if your SPA redirect system uses
+         sessionStorage.redirect
+    ====================================================== -->
 
     <script>
+
         (function () {
-            var redirect = sessionStorage.redirect;
 
-            delete sessionStorage.redirect;
+            const redirect =
+                sessionStorage.getItem("redirect");
 
-            if (redirect && redirect !== location.href) {
-                history.replaceState(null, null, redirect);
+            sessionStorage.removeItem("redirect");
+
+
+            if (
+                redirect &&
+                redirect !== window.location.href
+            ) {
+
+                history.replaceState(
+                    null,
+                    "",
+                    redirect
+                );
+
             }
+
         })();
+
     </script>
-    <script src="_framework/blazor.webassembly.js"></script>
+
+
+
+    <!-- =====================================================
+         BLAZOR
+    ====================================================== -->
+
+    <script src="/_framework/blazor.webassembly.js"
+            autostart="false">
+    </script>
+
 
     <script>
-        window.scrollToTop = () => {
+
+        (async function () {
+
+            const overlay =
+                document.getElementById(
+                    "blazor-startup-overlay"
+                );
+
+
+            try {
+
+                await Blazor.start();
+
+
+                /*
+                Wait until Blazor has painted the new page
+                before removing the loading overlay.
+                */
+
+                requestAnimationFrame(function () {
+
+                    requestAnimationFrame(function () {
+
+                        setTimeout(function () {
+
+                            if (overlay) {
+
+                                overlay.classList.add("hide");
+
+
+                                setTimeout(function () {
+
+                                    if (overlay) {
+                                        overlay.remove();
+                                    }
+
+                                }, 250);
+
+                            }
+
+                        }, 75);
+
+                    });
+
+                });
+
+            }
+            catch (error) {
+
+                console.error(
+                    "Blazor failed to start:",
+                    error
+                );
+
+
+                /*
+                If Blazor fails, show our static
+                fallback 404 content.
+                */
+
+                if (overlay) {
+
+                    overlay.classList.add("hide");
+
+
+                    setTimeout(function () {
+
+                        overlay.remove();
+
+                    }, 250);
+
+                }
+
+            }
+
+        })();
+
+    </script>
+
+
+
+    <!-- =====================================================
+         SCROLL TO TOP
+    ====================================================== -->
+
+    <script>
+
+        window.scrollToTop = function () {
+
             window.scrollTo({
+
                 top: 0,
-                behavior: 'smooth'
+
+                behavior: "smooth"
+
             });
+
         };
+
     </script>
 
-    <!--<div id="modal-root"></div>-->
 
 
+    <!-- =====================================================
+         SHARE CHALLENGE
+    ====================================================== -->
 
     <script>
+
         async function shareChallenge(url, text) {
 
             try {
+
                 if (navigator.share) {
+
                     await navigator.share({
+
                         title: "Typing Challenge",
+
                         text: text,
+
                         url: url
+
                     });
 
-                    // user successfully shared or closed share sheet
-                    window.dispatchEvent(new Event("shareClosed"));
                 }
                 else {
+
                     await navigator.clipboard.writeText(url);
-                    alert("Link copied! Share it with your friends.");
-                    window.dispatchEvent(new Event("shareClosed"));
+
+                    alert(
+                        "Link copied! Share it with your friends."
+                    );
+
                 }
+
+
+                window.dispatchEvent(
+                    new Event("shareClosed")
+                );
+
             }
             catch (err) {
-                console.log("Share cancelled or failed", err);
-                window.dispatchEvent(new Event("shareClosed"));
+
+                console.log(
+                    "Share cancelled or failed",
+                    err
+                );
+
+
+                window.dispatchEvent(
+                    new Event("shareClosed")
+                );
+
             }
+
         }
+
     </script>
 
+
+
     <script>
+
         function registerShareListener(dotnetRef) {
-            window.addEventListener("shareClosed", () => {
-                dotnetRef.invokeMethodAsync("OnShareClosed");
-            });
-        }
-    </script>
-    <script>
-        window.blazorModal = {
-            moveToBody: function (element) {
-                const root = document.getElementById("modal-root");
-                if (element && root) {
-                    root.appendChild(element);
+
+            window.addEventListener(
+                "shareClosed",
+                function () {
+
+                    dotnetRef.invokeMethodAsync(
+                        "OnShareClosed"
+                    );
+
                 }
-            }
-        };
+            );
+
+        }
+
     </script>
+
 
 </body>
+
 </html>

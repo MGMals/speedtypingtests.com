@@ -1,0 +1,603 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contact Us | SpeedTypingTests</title>
+
+    <meta name="description"
+          content="Contact SpeedTypingTests with questions, feedback, suggestions, or support requests about our free typing tests and typing practice tools.">
+
+    <meta name="robots" content="index,follow">
+
+    <link rel="canonical"
+          href="https://speedtypingtests.com/contact.html">
+
+    <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/fontawesome.css" rel="stylesheet">
+    <link href="/css/flaticon.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+    <div id="header"></div>
+
+
+
+    <!-- CONTENT -->
+    <section class="container mt-5 mb-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="p-4">
+
+
+                    <h1 class="hero-title text-center mb-3">
+                        Contact <span style="color:#2ab6f7;">Us</span>
+                    </h1>
+
+
+                    <p class="text-center mb-5">
+                        Have a question, suggestion, or feedback about SpeedTypingTests?
+                        Send us a message and we'll be happy to hear from you.
+                    </p>
+
+
+                    <form id="contactForm" novalidate>
+
+
+                        <!-- NAME + EMAIL -->
+                        <div class="row">
+
+                            <div class="col-sm-6">
+
+                                <div class="mb-3">
+
+                                    <label for="name" class="form-label">
+                                        Name
+                                    </label>
+
+                                    <input type="text"
+                                           id="name"
+                                           name="name"
+                                           class="form-control border"
+                                           placeholder="Enter Name"
+                                           required>
+
+                                    <div class="invalid-feedback">
+                                        Please enter your name.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-sm-6">
+
+                                <div class="mb-3">
+
+                                    <label for="email" class="form-label">
+                                        Email
+                                    </label>
+
+                                    <input type="email"
+                                           id="email"
+                                           name="email"
+                                           class="form-control border"
+                                           placeholder="Enter Email"
+                                           required>
+
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- SUBJECT -->
+                        <div class="row">
+
+                            <div class="col-sm-12">
+
+                                <div class="mb-3">
+
+                                    <label for="subject" class="form-label">
+                                        Subject
+                                    </label>
+
+                                    <input type="text"
+                                           id="subject"
+                                           name="subject"
+                                           class="form-control border"
+                                           placeholder="Enter Subject"
+                                           required>
+
+                                    <div class="invalid-feedback">
+                                        Please enter a subject.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- MESSAGE -->
+                        <div class="mb-3">
+
+                            <label for="message" class="form-label">
+                                Message
+                            </label>
+
+                            <textarea id="message"
+                                      name="message"
+                                      class="form-control border"
+                                      rows="5"
+                                      placeholder="Enter Message"
+                                      required></textarea>
+
+                            <div class="invalid-feedback">
+                                Please enter your message.
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- HONEYPOT -->
+                        <div style="position:absolute; left:-9999px;"
+                             aria-hidden="true">
+
+                            <label for="website">
+                                Website
+                            </label>
+
+                            <input type="text"
+                                   id="website"
+                                   name="website"
+                                   tabindex="-1"
+                                   autocomplete="off">
+
+                        </div>
+
+
+
+                        <!-- BUTTONS -->
+                        <div class="row mt-3">
+
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-2">
+
+                                <button type="submit"
+                                        id="submitButton"
+                                        class="theme-btn btn-style-one w-100">
+
+                                    <span id="submitButtonText"
+                                          class="btn-title text-center w-100 d-block">
+
+                                        Submit
+
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-2">
+
+                                <button type="reset"
+                                        class="theme-btn btn-style-one w-100">
+
+                                    <span class="btn-title text-center w-100 d-block">
+
+                                        Reset
+
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                    </form>
+
+
+
+                    <!-- SUCCESS MESSAGE -->
+                    <div id="successMessage"
+                         class="alert alert-success mt-4"
+                         role="alert"
+                         style="display:none;">
+
+                        Message sent successfully!
+
+                    </div>
+
+
+
+                    <!-- ERROR MESSAGE -->
+                    <div id="errorMessage"
+                         class="alert alert-danger mt-4"
+                         role="alert"
+                         style="display:none;">
+
+                        Failed to send message. Please try again.
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <div id="footer" style="min-height:300px;"></div>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="/js/site.js"></script>
+    <script>
+
+        /*
+        =====================================================
+        LOAD HEADER
+        =====================================================
+        */
+
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Header failed to load:", error);
+            });
+
+
+
+        /*
+        =====================================================
+        LOAD FOOTER
+        =====================================================
+        */
+
+        fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Footer failed to load:", error);
+            });
+
+
+
+        /*
+        =====================================================
+        CONTACT FORM
+        =====================================================
+        */
+
+        const CONTACT_ENDPOINT =
+            "https://uindlylnyxxffkfijpnc.supabase.co/functions/v1/contact-us";
+
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+        const submitButton =
+            document.getElementById("submitButton");
+
+        const submitButtonText =
+            document.getElementById("submitButtonText");
+
+        const successMessage =
+            document.getElementById("successMessage");
+
+        const errorMessage =
+            document.getElementById("errorMessage");
+
+
+
+        contactForm.addEventListener("submit", async function (event) {
+
+            event.preventDefault();
+
+
+            /*
+            -----------------------------------------
+            Hide previous messages
+            -----------------------------------------
+            */
+
+            successMessage.style.display = "none";
+
+            errorMessage.style.display = "none";
+
+
+
+            /*
+            -----------------------------------------
+            Browser validation
+            -----------------------------------------
+            */
+
+            if (!contactForm.checkValidity()) {
+
+                contactForm.classList.add("was-validated");
+
+                return;
+
+            }
+
+
+
+            /*
+            -----------------------------------------
+            Simple honeypot spam protection
+            -----------------------------------------
+            */
+
+            const honeypot =
+                document.getElementById("website").value;
+
+
+            if (honeypot !== "") {
+
+                console.log("Spam submission blocked.");
+
+                return;
+
+            }
+
+
+
+            /*
+            -----------------------------------------
+            Disable submit button
+            -----------------------------------------
+            */
+
+            submitButton.disabled = true;
+
+            submitButtonText.textContent = "Sending...";
+
+
+
+            /*
+            -----------------------------------------
+            Build payload
+            -----------------------------------------
+            */
+const payload = {
+
+    name:
+        document.getElementById("name").value.trim(),
+
+    email:
+        document.getElementById("email").value.trim(),
+
+    subject:
+        document.getElementById("subject").value.trim(),
+
+    message:
+        document.getElementById("message").value.trim(),
+
+    createdAt:
+        new Date().toISOString()
+
+};
+
+
+            try {
+
+                /*
+                -----------------------------------------
+                Send to Supabase Edge Function
+                -----------------------------------------
+                */
+
+                const response = await fetch(
+                    CONTACT_ENDPOINT,
+                    {
+
+                        method: "POST",
+
+                        headers: {
+
+                            "Content-Type": "application/json"
+
+                        },
+
+                        body: JSON.stringify(payload)
+
+                    }
+                );
+
+
+
+                const body =
+                    await response.text();
+
+
+                console.log(
+                    "Contact form status:",
+                    response.status
+                );
+
+
+                console.log(
+                    "Contact form response:",
+                    body
+                );
+
+
+
+                /*
+                -----------------------------------------
+                Handle errors
+                -----------------------------------------
+                */
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "Contact request failed. " +
+                        "Status: " +
+                        response.status +
+                        " Response: " +
+                        body
+                    );
+
+                }
+
+
+
+                /*
+                -----------------------------------------
+                Success
+                -----------------------------------------
+                */
+
+                successMessage.textContent =
+                    "Message sent successfully!";
+
+                successMessage.style.display =
+                    "block";
+
+
+                errorMessage.style.display =
+                    "none";
+
+
+                contactForm.reset();
+
+                contactForm.classList.remove(
+                    "was-validated"
+                );
+
+
+                successMessage.scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "center"
+
+                });
+
+
+            }
+            catch (error) {
+
+
+                console.error(
+                    "Contact form error:",
+                    error
+                );
+
+
+                successMessage.style.display =
+                    "none";
+
+
+                errorMessage.textContent =
+                    "Failed to send message. Please try again.";
+
+
+                errorMessage.style.display =
+                    "block";
+
+
+                errorMessage.scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "center"
+
+                });
+
+
+            }
+            finally {
+
+
+                submitButton.disabled =
+                    false;
+
+
+                submitButtonText.textContent =
+                    "Submit";
+
+
+            }
+
+        });
+
+
+
+        /*
+        =====================================================
+        RESET FORM
+        =====================================================
+        */
+
+        contactForm.addEventListener(
+            "reset",
+            function () {
+
+
+                successMessage.style.display =
+                    "none";
+
+
+                errorMessage.style.display =
+                    "none";
+
+
+                contactForm.classList.remove(
+                    "was-validated"
+                );
+
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>

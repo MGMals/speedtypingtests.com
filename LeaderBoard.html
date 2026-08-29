@@ -1,0 +1,1486 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>
+        Typing Leaderboard - Compare WPM & Accuracy | SpeedTypingTests
+    </title>
+
+    <meta name="description"
+          content="View the SpeedTypingTests typing leaderboard and compare WPM, accuracy, and consistency with typists from around the world.">
+
+    <meta name="robots"
+          content="index,follow">
+
+    <link rel="canonical"
+          href="https://speedtypingtests.com/LeaderBoard.html">
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link href="/css/bootstrap/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link href="/css/style.css"
+          rel="stylesheet">
+
+    <link href="/css/app.css"
+          rel="stylesheet">
+
+    <link href="/css/fontawesome.css"
+          rel="stylesheet">
+
+    <link href="/css/flaticon.css"
+          rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         PAGE STYLES
+    ====================================================== -->
+
+    <style>
+
+        .leaderboard-table th {
+            white-space: nowrap;
+        }
+
+        .leaderboard-table td {
+            vertical-align: middle;
+        }
+
+        .leaderboard-rank {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .leaderboard-loading {
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .leaderboard-error {
+            padding: 25px;
+            border: 1px solid #f1c2c7;
+            background: #f8d7da;
+            color: #842029;
+            border-radius: 8px;
+        }
+
+        .leaderboard-empty {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .leaderboard-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .leaderboard-info-card {
+            height: 100%;
+        }
+
+        .leaderboard-main-card {
+            border-radius: 10px;
+        }
+
+        .leaderboard-page-text {
+            min-width: 110px;
+            text-align: center;
+        }
+
+
+        @media (max-width: 768px) {
+
+            .leaderboard-content-padding {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+
+            .leaderboard-table {
+                font-size: 14px;
+            }
+        }
+    </style>
+
+
+    <!-- =====================================================
+         WEB PAGE SCHEMA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "SpeedTypingTests Typing Leaderboard",
+            "url": "https://speedtypingtests.com/LeaderBoard.html",
+            "description": "Compare typing speed, WPM, accuracy and consistency with typists from around the world.",
+            "isPartOf": {
+                "@type": "WebSite",
+                "name": "SpeedTypingTests",
+                "url": "https://speedtypingtests.com/"
+            }
+        }
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <div id="header"></div>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main>
+
+        <section class="container mt-4 mb-5">
+
+
+            <div class="row">
+
+
+                <!-- =================================================
+                     LEFT SIDEBAR
+                ================================================== -->
+                <!-- LEFT SIDEBAR -->
+                <div class="col-lg-3 d-none d-lg-block">
+
+                    <!-- ROW 1 -->
+                    <div class="row mb-3">
+                        <div class="col-12">
+
+                            <div class="card p-3">
+
+                                <h6 class="fw-bold">
+                                    🏆 How Rankings Work
+                                </h6>
+
+                                <p class="small text-muted mb-0">
+                                    Rankings are based on typing speed measured in
+                                    Words Per Minute (WPM). Accuracy and consistency
+                                    are also displayed to help identify fast and
+                                    reliable typists.
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- ROW 2 -->
+                    <div class="row mb-3">
+                        <div class="col-12">
+
+                            <div class="card p-3">
+
+                                <h6 class="fw-bold">
+                                    ⌨️ Improve Your WPM
+                                </h6>
+
+                                <ul class="small text-muted ps-3 mb-0">
+
+                                    <li>Practice typing every day</li>
+
+                                    <li>Focus on accuracy first</li>
+
+                                    <li>Use proper finger placement</li>
+
+                                    <li>Avoid looking at your keyboard</li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- ROW 3 -->
+                    <div class="row mb-3">
+                        <div class="col-12">
+
+                            <div class="card p-3">
+
+                                <h6 class="fw-bold">
+                                    📊 Typing Speed Guide
+                                </h6>
+
+                                <p class="small text-muted mb-1">
+                                    40 WPM - Average
+                                </p>
+
+                                <p class="small text-muted mb-1">
+                                    60 WPM - Good
+                                </p>
+
+                                <p class="small text-muted mb-1">
+                                    90+ WPM - Excellent
+                                </p>
+
+                                <p class="small text-muted mb-0">
+                                    120+ WPM - Advanced
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- OPTIONAL ROW 4 -->
+                    <div class="row mb-3">
+                        <div class="col-12">
+
+                            <div class="card p-3 text-center">
+
+                                <h6 class="fw-bold">
+                                    Ready to compete?
+                                </h6>
+
+                                <p class="small text-muted">
+                                    Take a typing test and see where you rank.
+                                </p>
+
+                                <a href="/typing"
+                                   class="btn btn-primary btn-sm">
+
+                                    Start Test
+
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     MAIN LEADERBOARD
+                ================================================== -->
+
+                <div class="col-lg-9 px-lg-3">
+
+
+                    <div class="p-4 mb-4">
+
+
+                        <!-- TITLE -->
+
+                        <h1 class="hero-title mb-2 text-center">
+
+                            🏆Leader<span style="color:#2ab6f7;">board</span>
+
+                        </h1>
+
+
+
+                        <!-- INTRO -->
+
+                        <div class="mb-4">
+
+                            <p class="hero-subtitle"
+                               style="text-align:left;">
+
+                                View the SpeedTypingTests.com leaderboard and compare
+                                your typing speed with players from around the world.
+                                See how your Words Per Minute (WPM), accuracy, and
+                                consistency compare with other typists.
+
+                            </p>
+
+                            <p class="hero-subtitle"
+                               style="text-align:left;">
+
+                                Rankings highlight the strongest typing performances
+                                recorded from completed typing tests.
+
+                            </p>
+
+                            <p class="hero-subtitle"
+                               style="text-align:left;">
+
+                                Think you have what it takes? Complete a typing test
+                                today and see where you rank.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             LOADING
+                        ================================================== -->
+
+                        <div id="leaderboard-loading"
+                             class="leaderboard-loading">
+
+                            <div class="text-center">
+
+                                <div class="spinner-border text-primary"
+                                     role="status">
+
+                                    <span class="visually-hidden">
+                                        Loading leaderboard...
+                                    </span>
+
+                                </div>
+
+                                <p class="text-muted mt-3">
+                                    Loading leaderboard...
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             ERROR
+                        ================================================== -->
+
+                        <div id="leaderboard-error"
+                             class="leaderboard-error"
+                             style="display:none;">
+
+                            We couldn't load the leaderboard right now.
+                            Please try again later.
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             EMPTY
+                        ================================================== -->
+
+                        <div id="leaderboard-empty"
+                             class="leaderboard-empty"
+                             style="display:none;">
+
+                            <h5>
+                                No leaderboard results yet.
+                            </h5>
+
+                            <p class="text-muted">
+                                Complete a typing test and be one of the first
+                                players on the leaderboard.
+                            </p>
+
+                            <a href="/typing"
+                               class="btn btn-primary">
+
+                                Take a Typing Test
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             TABLE
+                        ================================================== -->
+
+                        <div id="leaderboard-container"
+                             class="card p-3 leaderboard-main-card"
+                             style="display:none;">
+
+
+                            <div class="table-responsive">
+
+                                <table class="table table-hover align-middle leaderboard-table">
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th scope="col">
+                                                #
+                                            </th>
+
+                                            <th scope="col">
+                                                Username
+                                            </th>
+
+                                            <th scope="col">
+                                                WPM
+                                            </th>
+
+                                            <th scope="col">
+                                                Accuracy
+                                            </th>
+
+                                            <th scope="col">
+                                                Consistency
+                                            </th>
+
+                                            <th scope="col">
+                                                Date
+                                            </th>
+
+                                        </tr>
+
+                                    </thead>
+
+
+                                    <tbody id="leaderboard-body">
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+
+
+                            <!-- =================================================
+                                 PAGINATION
+                            ================================================== -->
+
+                            <div class="leaderboard-pagination">
+
+                                <button id="previous-page"
+                                        type="button"
+                                        class="btn btn-outline-primary">
+
+                                    ← Previous
+
+                                </button>
+
+
+                                <span id="page-info"
+                                      class="leaderboard-page-text">
+
+                                    Page 1 of 1
+
+                                </span>
+
+
+                                <button id="next-page"
+                                        type="button"
+                                        class="btn btn-outline-primary">
+
+                                    Next →
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 SEO / INFORMATION CONTENT
+            ====================================================== -->
+
+            <div class="row">
+
+                <div class="col-12">
+
+
+                    <section class="mt-3 leaderboard-content-padding"
+                             style="padding-left:50px; padding-right:50px;">
+
+
+                        <h2 class="fw-bold text-center mb-3">
+
+                            About the Speed Typing Leaderboard
+
+                        </h2>
+
+
+                        <p>
+
+                            The SpeedTypingTests leaderboard allows typists to
+                            compare typing performance with other users. Scores
+                            include Words Per Minute, typing accuracy, consistency,
+                            and the date of the completed typing test.
+
+                        </p>
+
+
+                        <p>
+
+                            A higher WPM score means more words can be typed in a
+                            shorter amount of time, but speed is only one part of
+                            becoming a strong typist. Accuracy and consistency are
+                            also important because typing quickly while making many
+                            mistakes can reduce real-world productivity.
+
+                        </p>
+
+
+
+                        <h3 class="fw-bold mt-4">
+
+                            How Typing Rankings Work
+
+                        </h3>
+
+
+                        <p>
+
+                            Leaderboard positions are primarily organized by typing
+                            speed, measured in Words Per Minute. When comparing
+                            performances, accuracy and consistency provide additional
+                            context about how reliably each user typed during the test.
+
+                        </p>
+
+
+                        <p>
+
+                            The highest-ranked users have demonstrated strong typing
+                            speed while maintaining good control and accuracy.
+
+                        </p>
+
+
+
+                        <h3 class="fw-bold mt-4">
+
+                            What Does WPM Mean?
+
+                        </h3>
+
+
+                        <p>
+
+                            WPM stands for Words Per Minute. It is one of the most
+                            common measurements used by online typing tests to
+                            estimate typing speed. A higher WPM generally means
+                            a typist is able to enter text more quickly.
+
+                        </p>
+
+
+                        <p>
+
+                            Speed alone does not tell the entire story. For example,
+                            someone typing very quickly while repeatedly correcting
+                            mistakes may be less efficient than someone typing at a
+                            slightly lower speed with very high accuracy.
+
+                        </p>
+
+
+
+                        <h3 class="fw-bold mt-4">
+
+                            What Is a Good Typing Speed?
+
+                        </h3>
+
+
+                        <p>
+
+                            Many everyday computer users type around 30 to 40 words
+                            per minute. Reaching approximately 60 WPM is a strong
+                            goal for many typists, while speeds above 90 or 100 WPM
+                            demonstrate advanced keyboard proficiency.
+
+                        </p>
+
+
+                        <p>
+
+                            Your ideal typing speed depends on how you use a keyboard.
+                            Someone who writes reports, programs software, transcribes
+                            information, or communicates frequently online may benefit
+                            more from developing higher typing speeds.
+
+                        </p>
+
+
+
+                        <h3 class="fw-bold mt-4">
+
+                            Tips to Improve Your Typing Speed
+
+                        </h3>
+
+
+                        <ul>
+
+                            <li>
+                                Practice typing regularly to develop muscle memory.
+                            </li>
+
+                            <li>
+                                Focus on accuracy before trying to dramatically
+                                increase your speed.
+                            </li>
+
+                            <li>
+                                Learn proper finger placement and touch typing techniques.
+                            </li>
+
+                            <li>
+                                Avoid looking at the keyboard while typing whenever possible.
+                            </li>
+
+                            <li>
+                                Practice different test durations to improve endurance
+                                and consistency.
+                            </li>
+
+                            <li>
+                                Track your WPM over time instead of focusing on a
+                                single test result.
+                            </li>
+
+                        </ul>
+
+
+
+                        <h3 class="fw-bold mt-4">
+
+                            Accuracy Matters Too
+
+                        </h3>
+
+
+                        <p>
+
+                            Typing accuracy measures how much of the text you entered
+                            correctly. Improving accuracy can reduce the amount of time
+                            spent using backspace, correcting spelling mistakes, and
+                            retyping sentences.
+
+                        </p>
+
+
+                        <p>
+
+                            Building accurate typing habits first often makes it easier
+                            to increase speed later because your fingers become more
+                            familiar with common keyboard movements.
+
+                        </p>
+
+
+
+                        <!-- CTA -->
+
+                        <div class="text-center mt-5 mb-4">
+
+                            <h3 class="fw-bold">
+                                Think You Can Make the Leaderboard?
+                            </h3>
+
+                            <p>
+                                Take a free typing test and measure your WPM and accuracy.
+                            </p>
+
+                            <a href="/typing"
+                               class="theme-btn">
+
+                                Take a Free Typing Test
+
+                            </a>
+
+                        </div>
+
+
+                    </section>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <div id="footer"
+         style="min-height:300px;"></div>
+
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
+    <script src="/js/bootstrap.min.js"></script>
+
+
+    <!-- Shared site JavaScript -->
+    <script src="/js/site.js"></script>
+
+    <!-- =====================================================
+         LOAD HEADER + FOOTER
+    ====================================================== -->
+
+    <script>
+
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('header').innerHTML = data;
+                updateStaticAuthMenu();
+
+
+            })
+            .catch(error => {
+
+                console.error(
+                    "Unable to load header:",
+                    error
+                );
+
+            });
+
+
+        fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('footer').innerHTML = data;
+
+            })
+            .catch(error => {
+
+                console.error(
+                    "Unable to load footer:",
+                    error
+                );
+
+            });
+
+    </script>
+
+
+
+    <!-- =====================================================
+         LEADERBOARD
+    ====================================================== -->
+
+    <script>
+
+        /*
+         * =====================================================
+         * SUPABASE CONFIGURATION
+         * =====================================================
+         *
+         * This is the PUBLIC anon key.
+         *
+         * Never put your Supabase service_role key here.
+         */
+
+        const SUPABASE_URL =
+            "https://uindlylnyxxffkfijpnc.supabase.co";
+
+
+        const SUPABASE_ANON_KEY =
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVpbmRseWxueXh4ZmZrZmlqcG5jIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3NDQxMzAsImV4cCI6MjA5MTMyMDEzMH0.QPEs0hsjjZCryj9RqF2n0S6vXipwz_KfzzsuvuxqSeA";
+
+
+
+        /*
+         * =====================================================
+         * PAGINATION
+         * =====================================================
+         */
+
+        let leaderboard = [];
+
+        let currentPage = 1;
+
+        const pageSize = 20;
+
+
+
+        /*
+         * =====================================================
+         * LOAD LEADERBOARD
+         * =====================================================
+         */
+
+        async function loadLeaderboard() {
+
+            const loading =
+                document.getElementById(
+                    "leaderboard-loading"
+                );
+
+            const container =
+                document.getElementById(
+                    "leaderboard-container"
+                );
+
+            const empty =
+                document.getElementById(
+                    "leaderboard-empty"
+                );
+
+            const errorBox =
+                document.getElementById(
+                    "leaderboard-error"
+                );
+
+
+            try {
+
+
+                /*
+                 * Query your Supabase LeaderboardView.
+                 *
+                 * Column names match your C# model:
+                 *
+                 * user_id
+                 * Username
+                 * wpm
+                 * Accuracy
+                 * Consistency
+                 * TestDate
+                 */
+
+                const endpoint =
+                    SUPABASE_URL +
+                    "/rest/v1/LeaderboardView" +
+                    "?select=user_id,Username,wpm,Accuracy,Consistency,TestDate";
+
+
+                const response =
+                    await fetch(
+                        endpoint,
+                        {
+
+                            method: "GET",
+
+                            headers: {
+
+                                "apikey":
+                                    SUPABASE_ANON_KEY,
+
+                                "Authorization":
+                                    "Bearer " +
+                                    SUPABASE_ANON_KEY,
+
+                                "Accept":
+                                    "application/json"
+
+                            }
+
+                        }
+                    );
+
+
+                if (!response.ok) {
+
+                    const details =
+                        await response.text();
+
+                    console.error(
+                        "Supabase leaderboard error:",
+                        details
+                    );
+
+                    throw new Error(
+                        "Unable to load leaderboard."
+                    );
+
+                }
+
+
+                const data =
+                    await response.json();
+
+
+                /*
+                 * Sort highest WPM first.
+                 *
+                 * If two users have the same WPM:
+                 *   higher accuracy wins.
+                 *
+                 * If accuracy is also equal:
+                 *   higher consistency wins.
+                 */
+
+                leaderboard =
+                    data.sort(
+                        function (a, b) {
+
+                            const wpmDifference =
+                                Number(b.wpm || 0) -
+                                Number(a.wpm || 0);
+
+
+                            if (wpmDifference !== 0) {
+
+                                return wpmDifference;
+
+                            }
+
+
+                            const accuracyDifference =
+                                Number(b.Accuracy || 0) -
+                                Number(a.Accuracy || 0);
+
+
+                            if (accuracyDifference !== 0) {
+
+                                return accuracyDifference;
+
+                            }
+
+
+                            return (
+                                Number(b.Consistency || 0) -
+                                Number(a.Consistency || 0)
+                            );
+
+                        }
+                    );
+
+
+                loading.style.display =
+                    "none";
+
+
+                if (
+                    !leaderboard ||
+                    leaderboard.length === 0
+                ) {
+
+                    empty.style.display =
+                        "block";
+
+                    return;
+
+                }
+
+
+                container.style.display =
+                    "block";
+
+
+                renderLeaderboard();
+
+            }
+            catch (error) {
+
+                console.error(
+                    "Leaderboard error:",
+                    error
+                );
+
+
+                loading.style.display =
+                    "none";
+
+                errorBox.style.display =
+                    "block";
+
+            }
+
+        }
+
+
+
+        /*
+         * =====================================================
+         * RENDER CURRENT PAGE
+         * =====================================================
+         */
+
+        function renderLeaderboard() {
+
+            const body =
+                document.getElementById(
+                    "leaderboard-body"
+                );
+
+
+            body.innerHTML =
+                "";
+
+
+            const startIndex =
+                (currentPage - 1) *
+                pageSize;
+
+
+            const endIndex =
+                startIndex +
+                pageSize;
+
+
+            const currentEntries =
+                leaderboard.slice(
+                    startIndex,
+                    endIndex
+                );
+
+
+            currentEntries.forEach(
+                function (entry, arrayIndex) {
+
+
+                    const ranking =
+                        startIndex +
+                        arrayIndex +
+                        1;
+
+
+                    const row =
+                        document.createElement(
+                            "tr"
+                        );
+
+
+                    /*
+                     * Ranking / medals
+                     */
+
+                    const rankCell =
+                        document.createElement(
+                            "td"
+                        );
+
+
+                    rankCell.className =
+                        "leaderboard-rank";
+
+
+                    if (ranking === 1) {
+
+                        rankCell.textContent =
+                            "🥇";
+
+                    }
+                    else if (ranking === 2) {
+
+                        rankCell.textContent =
+                            "🥈";
+
+                    }
+                    else if (ranking === 3) {
+
+                        rankCell.textContent =
+                            "🥉";
+
+                    }
+                    else {
+
+                        rankCell.textContent =
+                            ranking;
+
+                        rankCell.classList.add(
+                            "text-muted"
+                        );
+
+                    }
+
+
+
+                    /*
+                     * Username
+                     */
+
+                    const usernameCell =
+                        document.createElement(
+                            "td"
+                        );
+
+
+                    usernameCell.textContent =
+                        entry.Username ||
+                        "Anonymous";
+
+
+
+                    /*
+                     * WPM
+                     */
+
+                    const wpmCell =
+                        document.createElement(
+                            "td"
+                        );
+
+
+                    wpmCell.className =
+                        "text-primary fw-bold";
+
+
+                    wpmCell.textContent =
+                        Number(
+                            entry.wpm || 0
+                        );
+
+
+
+                    /*
+                     * Accuracy
+                     *
+                     * Your Blazor version did:
+                     *
+                     * Accuracy * 100
+                     */
+
+                    const accuracyCell =
+                        document.createElement(
+                            "td"
+                        );
+
+
+                    const accuracy =
+                        Number(
+                            entry.Accuracy || 0
+                        ) * 100;
+
+
+                    accuracyCell.textContent =
+                        accuracy.toFixed(1) +
+                        "%";
+
+
+
+                    /*
+                     * Consistency
+                     */
+
+                    const consistencyCell =
+                        document.createElement(
+                            "td"
+                        );
+
+
+                    const consistency =
+                        Number(
+                            entry.Consistency || 0
+                        );
+
+
+                    consistencyCell.textContent =
+                        consistency.toFixed(1) +
+                        "%";
+
+
+
+                    /*
+                     * Date
+                     */
+
+                    const dateCell =
+                        document.createElement(
+                            "td"
+                        );
+
+
+                    dateCell.textContent =
+                        formatDate(
+                            entry.TestDate
+                        );
+
+
+
+                    /*
+                     * Add cells
+                     */
+
+                    row.appendChild(
+                        rankCell
+                    );
+
+                    row.appendChild(
+                        usernameCell
+                    );
+
+                    row.appendChild(
+                        wpmCell
+                    );
+
+                    row.appendChild(
+                        accuracyCell
+                    );
+
+                    row.appendChild(
+                        consistencyCell
+                    );
+
+                    row.appendChild(
+                        dateCell
+                    );
+
+
+                    body.appendChild(
+                        row
+                    );
+
+                }
+            );
+
+
+            updatePagination();
+
+        }
+
+
+
+        /*
+         * =====================================================
+         * DATE FORMAT
+         * =====================================================
+         */
+
+        function formatDate(dateValue) {
+
+            if (!dateValue) {
+
+                return "";
+
+            }
+
+
+            const date =
+                new Date(
+                    dateValue
+                );
+
+
+            if (
+                Number.isNaN(
+                    date.getTime()
+                )
+            ) {
+
+                return "";
+
+            }
+
+
+            return date.toLocaleDateString(
+                "en-US",
+                {
+
+                    month: "2-digit",
+
+                    day: "2-digit",
+
+                    year: "numeric"
+
+                }
+            );
+
+        }
+
+
+
+        /*
+         * =====================================================
+         * PAGINATION
+         * =====================================================
+         */
+
+        function updatePagination() {
+
+            const totalPages =
+                Math.max(
+                    1,
+                    Math.ceil(
+                        leaderboard.length /
+                        pageSize
+                    )
+                );
+
+
+            const previousButton =
+                document.getElementById(
+                    "previous-page"
+                );
+
+
+            const nextButton =
+                document.getElementById(
+                    "next-page"
+                );
+
+
+            const pageInfo =
+                document.getElementById(
+                    "page-info"
+                );
+
+
+            previousButton.disabled =
+                currentPage <= 1;
+
+
+            nextButton.disabled =
+                currentPage >=
+                totalPages;
+
+
+            pageInfo.textContent =
+                "Page " +
+                currentPage +
+                " of " +
+                totalPages;
+
+        }
+
+
+
+        /*
+         * PREVIOUS
+         */
+
+        document
+            .getElementById(
+                "previous-page"
+            )
+            .addEventListener(
+                "click",
+                function () {
+
+                    if (
+                        currentPage >
+                        1
+                    ) {
+
+                        currentPage--;
+
+                        renderLeaderboard();
+
+
+                        document
+                            .querySelector(
+                                ".leaderboard-main-card"
+                            )
+                            ?.scrollIntoView(
+                                {
+
+                                    behavior:
+                                        "smooth",
+
+                                    block:
+                                        "start"
+
+                                }
+                            );
+
+                    }
+
+                }
+            );
+
+
+
+        /*
+         * NEXT
+         */
+
+        document
+            .getElementById(
+                "next-page"
+            )
+            .addEventListener(
+                "click",
+                function () {
+
+                    const totalPages =
+                        Math.ceil(
+                            leaderboard.length /
+                            pageSize
+                        );
+
+
+                    if (
+                        currentPage <
+                        totalPages
+                    ) {
+
+                        currentPage++;
+
+                        renderLeaderboard();
+
+
+                        document
+                            .querySelector(
+                                ".leaderboard-main-card"
+                            )
+                            ?.scrollIntoView(
+                                {
+
+                                    behavior:
+                                        "smooth",
+
+                                    block:
+                                        "start"
+
+                                }
+                            );
+
+                    }
+
+                }
+            );
+
+
+
+        /*
+         * =====================================================
+         * START
+         * =====================================================
+         */
+
+        loadLeaderboard();
+
+    </script>
+
+
+</body>
+
+</html>

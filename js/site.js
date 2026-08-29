@@ -19,3 +19,32 @@ window.startTypingAnimation = () => {
 
     }, 2200);
 };
+
+
+function updateStaticAuthMenu() {
+
+    const authToken = localStorage.getItem("authToken");
+    const userID = localStorage.getItem("userID");
+
+    const isAuthenticated =
+        authToken &&
+        authToken !== "null" &&
+        authToken !== "undefined" &&
+        userID &&
+        userID !== "null" &&
+        userID !== "undefined";
+
+
+    document
+        .querySelectorAll(".auth-logged-in")
+        .forEach(item => {
+            item.hidden = !isAuthenticated;
+        });
+
+
+    document
+        .querySelectorAll(".auth-logged-out")
+        .forEach(item => {
+            item.hidden = !!isAuthenticated;
+        });
+}

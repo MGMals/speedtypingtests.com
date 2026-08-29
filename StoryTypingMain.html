@@ -1,0 +1,1226 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>
+        Story Typing Tests & Mystery Typing Games | SpeedTypingTests
+    </title>
+
+    <meta name="description"
+          content="Practice typing with interactive story typing challenges. Improve your WPM, accuracy, focus, and consistency while solving fun detective mysteries.">
+
+    <meta name="robots"
+          content="index,follow">
+
+    <link rel="canonical"
+          href="https://speedtypingtests.com/StoryTypingMain.html">
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link href="/css/bootstrap/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link href="/css/style.css"
+          rel="stylesheet">
+
+    <link href="/css/app.css"
+          rel="stylesheet">
+
+    <link href="/css/fontawesome.css"
+          rel="stylesheet">
+
+    <link href="/css/flaticon.css"
+          rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         PAGE STYLES
+    ====================================================== -->
+
+    <style>
+
+        .story-page {
+            padding-top: 25px;
+            padding-bottom: 40px;
+        }
+
+        .story-intro {
+            max-width: 1000px;
+            margin: 0 auto 25px auto;
+        }
+
+        .story-card-row {
+            margin-top: 15px;
+        }
+
+        .story-card {
+            height: 100%;
+        }
+
+            .story-card .inner-box {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .story-card .content-box {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+            }
+
+            .story-card .text {
+                flex-grow: 1;
+            }
+
+        .story-meta {
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .story-section {
+            padding-left: 50px;
+            padding-right: 50px;
+            margin-top: 25px;
+        }
+
+        .story-info-sidebar .card {
+            width: 100%;
+        }
+
+        .story-coming-grid p {
+            margin-bottom: 18px;
+        }
+
+        .faq-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .faq-wrapper {
+            width: 100%;
+        }
+
+        .faq-title {
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+            .faq-title span {
+                color: #2ab6f7;
+            }
+
+        .faq-item {
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            position: relative;
+            padding: 18px 45px 18px 0;
+            font-weight: 600;
+        }
+
+            .faq-question .icon {
+                position: absolute;
+                right: 5px;
+                top: 18px;
+            }
+
+        .faq-answer {
+            display: none;
+            padding: 0 35px 18px 0;
+            color: #6c757d;
+            line-height: 1.7;
+        }
+
+            .faq-answer.open {
+                display: block;
+            }
+
+        .story-cta {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 991px) {
+
+            .story-section {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .story-page {
+                padding-top: 15px;
+            }
+
+            .story-section {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    </style>
+
+
+    <!-- =====================================================
+         STRUCTURED DATA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Story Typing Challenges",
+            "url": "https://speedtypingtests.com/StoryTypingMain.html",
+            "description": "Interactive mystery typing challenges designed to improve typing speed, accuracy, consistency, and focus.",
+            "isPartOf": {
+                "@type": "WebSite",
+                "name": "SpeedTypingTests",
+                "url": "https://speedtypingtests.com/"
+            }
+        }
+    </script>
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is a story typing challenge?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Story typing challenges combine typing practice with interactive stories. Instead of typing random words, you type through exciting investigations while improving speed and accuracy."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How can story typing tests improve my typing speed?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Regular practice helps build muscle memory, improve keyboard familiarity, and increase your Words Per Minute over time."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What typing speed should I aim for?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Many everyday computer users type around 40 to 60 WPM. Advanced typists often reach 70 WPM or higher with strong accuracy."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Why is typing accuracy important?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Speed is most useful when combined with accuracy. Fewer mistakes can help you type more efficiently."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Are these typing challenges good for beginners?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Beginners can start with easier challenges and gradually improve their speed, confidence, and accuracy."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How is WPM calculated?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "WPM, or Words Per Minute, measures how many words you can type during a selected typing test duration."
+                    }
+                }
+            ]
+        }
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <div id="header"></div>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="story-page">
+
+        <div class="container">
+
+
+            <!-- =================================================
+                 TITLE + INTRO
+            ================================================== -->
+
+            <h1 class="hero-title mb-3 text-center">
+
+                Typing
+                <span style="color:#2ab6f7;">
+                    Story Challenges
+                </span>
+
+            </h1>
+
+
+            <div class="story-intro">
+
+                <p class="hero-subtitle"
+                   style="text-align:left;">
+
+                    Improve your typing skills with Detective Typing Files —
+                    interactive story challenges that combine typing practice
+                    with mystery adventures. Follow the clues, complete cases,
+                    and improve your WPM, accuracy, and consistency.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STORY CARDS
+            ================================================== -->
+
+            <div class="row text-center story-card-row">
+
+
+                <!-- CASE 001 -->
+
+                <div class="service-block col-lg-4 col-sm-6 mb-4 story-card">
+
+                    <div class="inner-box position-relative">
+
+                        <div class="new-badge">
+                            🔎 CASE 001
+                        </div>
+
+                        <div class="icon-box">
+
+                            <i class="bi bi-trophy"></i>
+
+                        </div>
+
+                        <div class="content-box">
+
+                            <h2 class="title h6">
+
+                                The Stolen Championship Ring 💍
+
+                            </h2>
+
+                            <div class="story-meta">
+
+                                ⭐ Medium
+                                &nbsp; | &nbsp;
+                                ⏱ 5 Minutes
+
+                            </div>
+
+                            <div class="text">
+
+                                A legendary championship ring has vanished
+                                from a secure locker room. Follow the clues,
+                                identify the suspect, and solve this mystery
+                                before time runs out.
+
+                            </div>
+
+                            <a href="/storytyping/stolen-ring"
+                               class="theme-btn ser-btn">
+
+                                Begin Investigation
+
+                                <i class="flaticon-arrow-pointing-to-right btn-icon ms-1"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CASE 002 -->
+
+                <div class="service-block col-lg-4 col-sm-6 mb-4 story-card">
+
+                    <div class="inner-box position-relative">
+
+                        <div class="new-badge">
+                            🔎 CASE 002
+                        </div>
+
+                        <div class="icon-box">
+
+                            <i class="bi bi-phone"></i>
+
+                        </div>
+
+                        <div class="content-box">
+
+                            <h2 class="title h6">
+
+                                The Fake CEO 📱
+
+                            </h2>
+
+                            <div class="story-meta">
+
+                                ⭐ Hard
+                                &nbsp; | &nbsp;
+                                ⏱ 5 Minutes
+
+                            </div>
+
+                            <div class="text">
+
+                                A technology company receives an urgent
+                                message from its CEO. After millions disappear,
+                                Detective Olivia Stone must uncover the truth
+                                behind the digital deception.
+
+                            </div>
+
+                            <a href="/storytyping/fake-ceo"
+                               class="theme-btn ser-btn">
+
+                                Begin Investigation
+
+                                <i class="flaticon-arrow-pointing-to-right btn-icon ms-1"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CASE 003 -->
+
+                <div class="service-block col-lg-4 col-sm-6 mb-4 story-card">
+
+                    <div class="inner-box position-relative">
+
+                        <div class="new-badge">
+                            🔎 CASE 003
+                        </div>
+
+                        <div class="icon-box">
+
+                            <i class="bi bi-cpu"></i>
+
+                        </div>
+
+                        <div class="content-box">
+
+                            <h2 class="title h6">
+
+                                The AI That Predicted the Future 🤖
+
+                            </h2>
+
+                            <div class="story-meta">
+
+                                ⭐ Extreme
+                                &nbsp; | &nbsp;
+                                ⏱ 5 Minutes
+
+                            </div>
+
+                            <div class="text">
+
+                                An advanced AI system predicts events with
+                                impossible accuracy. When it forecasts something
+                                unexpected, the technology suddenly disappears.
+
+                            </div>
+
+                            <a href="/storytyping/ai-future"
+                               class="theme-btn ser-btn">
+
+                                Begin Investigation
+
+                                <i class="flaticon-arrow-pointing-to-right btn-icon ms-1"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 WHAT ARE STORY CHALLENGES
+            ================================================== -->
+
+            <div class="row mt-4">
+
+
+                <!-- LEFT INFORMATION BOX -->
+
+                <div class="col-lg-3 d-none d-lg-block">
+
+                    <div class="row mb-3">
+
+                        <div class="col-12">
+
+                            <div class="card p-3">
+
+                                <h6 class="fw-bold">
+
+                                    🔎 How It Works
+
+                                </h6>
+
+                                <p class="small text-muted mb-2">
+
+                                    Choose a case, follow the clues,
+                                    and type your way through the investigation.
+
+                                </p>
+
+                                <p class="small text-muted mb-1">
+                                    ⏱ 5 Minute Cases
+                                </p>
+
+                                <p class="small text-muted mb-1">
+                                    🎯 Improve Accuracy
+                                </p>
+
+                                <p class="small text-muted mb-1">
+                                    🚀 Increase WPM
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT CONTENT -->
+
+                <div class="col-lg-9 mb-3">
+
+                    <h2 class="fw-bold text-center mb-3 h4">
+
+                        What Are Story Typing Challenges?
+
+                    </h2>
+
+                    <p class="hero-subtitle mb-2"
+                       style="text-align:left;">
+
+                        Unlike traditional typing tests that only display
+                        random words, these story-based typing challenges
+                        let you improve your typing speed while following
+                        exciting investigations.
+
+                        <br><br>
+
+                        Each case is designed to test your keyboard accuracy,
+                        focus, and consistency. Read the story, follow the
+                        clues, and type through every chapter while tracking
+                        your Words Per Minute (WPM) and accuracy score.
+
+                        <br><br>
+
+                        Whether you are a beginner learning keyboard skills
+                        or an advanced typist looking to improve speed,
+                        these typing challenges provide a fun way to practice
+                        every day.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 WHY PRACTICE WITH STORIES
+            ================================================== -->
+
+            <section class="story-section">
+
+                <h2 class="fw-bold text-center mb-4 h4">
+
+                    Why Practice Typing With Stories?
+
+                </h2>
+
+
+                <div class="row">
+
+
+                    <div class="col-md-6">
+
+                        <p>
+
+                            <strong>
+                                🎯 Better Focus
+                            </strong>
+
+                            <br>
+
+                            Following a storyline keeps your attention
+                            longer than traditional typing drills.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <p>
+
+                            <strong>
+                                ⚡ Improve Speed
+                            </strong>
+
+                            <br>
+
+                            Regular practice helps your fingers build
+                            muscle memory and type faster.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <p>
+
+                            <strong>
+                                ✅ Increase Accuracy
+                            </strong>
+
+                            <br>
+
+                            Typing complete sentences helps reduce
+                            mistakes and improve consistency.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <p>
+
+                            <strong>
+                                🧠 Build Confidence
+                            </strong>
+
+                            <br>
+
+                            Fun challenges make it easier to practice
+                            regularly.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DIFFICULTY LEVELS
+            ================================================== -->
+
+            <section class="story-section">
+
+                <h2 class="fw-bold text-center mb-4 h4">
+
+                    Story Challenge Difficulty Levels
+
+                </h2>
+
+
+                <p>
+
+                    ⭐ <strong>Medium:</strong>
+                    Perfect for users building confidence and improving
+                    everyday typing speed.
+
+                </p>
+
+
+                <p>
+
+                    ⭐ <strong>Hard:</strong>
+                    Designed for users who want longer words,
+                    complex sentences, and a greater challenge.
+
+                </p>
+
+
+                <p>
+
+                    ⭐ <strong>Extreme:</strong>
+                    Created for advanced typists looking to test
+                    their accuracy and speed under pressure.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 COMING SOON
+            ================================================== -->
+
+            <section class="story-section">
+
+                <h2 class="fw-bold text-center mb-4 h4">
+
+                    More Detective Files Coming Soon
+
+                </h2>
+
+
+                <p>
+
+                    New investigations are being created with different
+                    themes, including technology, sports, history,
+                    and mystery adventures.
+
+                </p>
+
+
+                <div class="row story-coming-grid">
+
+
+                    <div class="col-md-6">
+
+                        <p>
+
+                            <strong>
+                                💎 The Missing Diamond Investigation
+                            </strong>
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <p>
+
+                            <strong>
+                                ₿ The Billion Dollar Crypto Wallet
+                            </strong>
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <p>
+
+                            <strong>
+                                🚀 The Lost Space Mission
+                            </strong>
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <p>
+
+                            <strong>
+                                🏰 The Mystery Mansion Case
+                            </strong>
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FAQ
+            ================================================== -->
+
+            <section class="row justify-content-center mt-lg-4">
+
+
+                <!-- LEFT IMAGE -->
+
+                <div class="col-lg-5 col-md-12 text-center mb-4 mb-lg-0"
+                     style="padding:50px; display:flex; align-items:center; justify-content:center;">
+
+                    <img src="/images/keyboard.png"
+                         class="faq-image"
+                         alt="Keyboard illustration for typing challenge frequently asked questions">
+
+                </div>
+
+
+
+                <!-- RIGHT FAQ -->
+
+                <div class="col-lg-7 col-md-12"
+                     style="padding:50px;">
+
+                    <div class="faq-wrapper">
+
+
+                        <h2 class="faq-title">
+
+                            See Frequently Asked
+                            <span>Questions</span>
+
+                        </h2>
+
+
+                        <div class="faq-list">
+
+
+                            <!-- FAQ 1 -->
+
+                            <div class="faq-item">
+
+                                <div class="faq-question active">
+
+                                    What is a story typing challenge?
+
+                                    <span class="icon">
+
+                                        <i class="fa fa-angle-up"></i>
+
+                                    </span>
+
+                                </div>
+
+                                <div class="faq-answer open">
+
+                                    Story typing challenges combine typing
+                                    practice with interactive stories.
+                                    Instead of typing random words, you type
+                                    through exciting investigations while
+                                    improving speed and accuracy.
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- FAQ 2 -->
+
+                            <div class="faq-item">
+
+                                <div class="faq-question">
+
+                                    How can story typing tests improve my typing speed?
+
+                                    <span class="icon">
+
+                                        <i class="fa fa-angle-down"></i>
+
+                                    </span>
+
+                                </div>
+
+                                <div class="faq-answer">
+
+                                    Regular practice helps build muscle memory,
+                                    improve keyboard familiarity, and increase
+                                    your Words Per Minute (WPM) over time.
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- FAQ 3 -->
+
+                            <div class="faq-item">
+
+                                <div class="faq-question">
+
+                                    What typing speed should I aim for?
+
+                                    <span class="icon">
+
+                                        <i class="fa fa-angle-down"></i>
+
+                                    </span>
+
+                                </div>
+
+                                <div class="faq-answer">
+
+                                    Many everyday computer users type around
+                                    40–60 WPM. Advanced typists often reach
+                                    70+ WPM with strong accuracy.
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- FAQ 4 -->
+
+                            <div class="faq-item">
+
+                                <div class="faq-question">
+
+                                    Why is typing accuracy important?
+
+                                    <span class="icon">
+
+                                        <i class="fa fa-angle-down"></i>
+
+                                    </span>
+
+                                </div>
+
+                                <div class="faq-answer">
+
+                                    Speed is most useful when combined with
+                                    accuracy. Fewer mistakes help you type
+                                    faster and work more efficiently.
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- FAQ 5 -->
+
+                            <div class="faq-item">
+
+                                <div class="faq-question">
+
+                                    Are these typing challenges good for beginners?
+
+                                    <span class="icon">
+
+                                        <i class="fa fa-angle-down"></i>
+
+                                    </span>
+
+                                </div>
+
+                                <div class="faq-answer">
+
+                                    Yes. Beginners can start with easier
+                                    challenges and gradually improve their
+                                    speed, confidence, and accuracy.
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- FAQ 6 -->
+
+                            <div class="faq-item">
+
+                                <div class="faq-question">
+
+                                    How is WPM calculated?
+
+                                    <span class="icon">
+
+                                        <i class="fa fa-angle-down"></i>
+
+                                    </span>
+
+                                </div>
+
+                                <div class="faq-answer">
+
+                                    WPM, or Words Per Minute, measures how
+                                    many words you can type during the
+                                    selected typing test duration.
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CTA
+            ================================================== -->
+
+            <div class="story-cta">
+
+                <h2 class="fw-bold h3">
+
+                    Ready to Solve a Case?
+
+                </h2>
+
+                <p>
+
+                    Choose a detective file and practice your
+                    typing while following the investigation.
+
+                </p>
+
+                <a href="#top-stories"
+                   class="theme-btn"
+                   onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
+
+                    Choose a Story Challenge
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <div id="footer"
+         style="min-height:300px;"></div>
+
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Shared site JavaScript -->
+    <script src="/js/site.js"></script>
+
+    <!-- =====================================================
+         HEADER + FOOTER
+    ====================================================== -->
+
+    <script>
+
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('header').innerHTML = data;
+                updateStaticAuthMenu();
+
+
+            })
+            .catch(error => {
+
+                console.error(
+                    "Unable to load header:",
+                    error
+                );
+
+            });
+
+
+        fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById('footer').innerHTML = data;
+
+            })
+            .catch(error => {
+
+                console.error(
+                    "Unable to load footer:",
+                    error
+                );
+
+            });
+
+    </script>
+
+
+
+    <!-- =====================================================
+         FAQ ACCORDION
+    ====================================================== -->
+
+    <script>
+
+        document
+            .querySelectorAll(".faq-question")
+            .forEach(function (question) {
+
+                question.addEventListener(
+                    "click",
+                    function () {
+
+                        const currentAnswer =
+                            question.nextElementSibling;
+
+                        const currentIcon =
+                            question.querySelector(".icon i");
+
+                        const isOpen =
+                            currentAnswer.classList.contains("open");
+
+
+                        /*
+                         * Close all FAQs
+                         */
+
+                        document
+                            .querySelectorAll(".faq-answer")
+                            .forEach(function (answer) {
+
+                                answer.classList.remove("open");
+
+                            });
+
+
+                        document
+                            .querySelectorAll(".faq-question")
+                            .forEach(function (item) {
+
+                                item.classList.remove("active");
+
+                                const icon =
+                                    item.querySelector(".icon i");
+
+                                if (icon) {
+
+                                    icon.classList.remove(
+                                        "fa-angle-up"
+                                    );
+
+                                    icon.classList.add(
+                                        "fa-angle-down"
+                                    );
+
+                                }
+
+                            });
+
+
+                        /*
+                         * Open clicked FAQ if it wasn't already open
+                         */
+
+                        if (!isOpen) {
+
+                            currentAnswer.classList.add(
+                                "open"
+                            );
+
+                            question.classList.add(
+                                "active"
+                            );
+
+
+                            if (currentIcon) {
+
+                                currentIcon.classList.remove(
+                                    "fa-angle-down"
+                                );
+
+                                currentIcon.classList.add(
+                                    "fa-angle-up"
+                                );
+
+                            }
+
+                        }
+
+                    }
+                );
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>

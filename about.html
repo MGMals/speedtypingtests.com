@@ -429,33 +429,36 @@
 
 
     <!-- FOOTER -->
-    <div id="footer" style="min-height:300px;" ></div>
+    <div id="footer" style="min-height:300px;"></div>
 
 
     <!-- SCRIPTS -->
     <script src="js/bootstrap.min.js"></script>
-    
+
+    <!-- Shared site JavaScript -->
+    <script src="/js/site.js"></script>
+
     <script>
 
-            fetch('components/header.html')
-        .then(response => response.text())
-        .then(data => {
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
                 document.getElementById('header').innerHTML = data;
-        });
+            });
 
 
-            fetch('components/footer.html')
-        .then(response => {
+        fetch('components/footer.html')
+            .then(response => {
                 console.log("Footer response:", response.status);
-            return response.text();
-        })
-        .then(data => {
+                return response.text();
+            })
+            .then(data => {
                 console.log("Footer content:", data.substring(0, 200));
-            document.getElementById('footer').innerHTML = data;
-        })
-        .catch(error => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => {
                 console.error("Footer failed:", error);
-        });
+            });
 
     </script>
 

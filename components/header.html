@@ -2,16 +2,30 @@
 
     <div class="container">
 
-        <!-- LOGO HERE -->
+        <!-- =====================================================
+             LOGO
+        ====================================================== -->
+
         <div class="site-logo-logo-box">
+
             <div class="logo">
-                <a href="/" class="site-logo">
+
+                <a href="/"
+                   class="site-logo">
+
                     Speed<span>Typing</span>Tests<span>.com</span>
+
                 </a>
+
             </div>
+
         </div>
 
-        <!-- MOBILE TOGGLER -->
+
+        <!-- =====================================================
+             MOBILE TOGGLER
+        ====================================================== -->
+
         <button class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
@@ -25,53 +39,175 @@
         </button>
 
 
-        <!-- MENU -->
-        <div class="collapse navbar-collapse" id="navMenu">
+        <!-- =====================================================
+             NAVIGATION
+        ====================================================== -->
+
+        <div class="collapse navbar-collapse"
+             id="navMenu">
 
             <ul class="navbar-nav ms-auto align-items-center">
 
 
+                <!-- HOME -->
+
                 <li class="nav-item me-3">
-                    <a class="nav-link" href="/">
+
+                    <a class="nav-link"
+                       href="/">
+
                         Home
+
                     </a>
+
                 </li>
 
 
+                <!-- TYPING TESTS -->
+
                 <li class="nav-item me-3">
-                    <a class="nav-link" href="/typing">
+
+                    <a class="nav-link"
+                       href="/typing">
+
                         <i class="bi bi-lightning-charge"></i>
-                        <span>Typing Tests</span>
+
+                        <span>
+                            Typing Tests
+                        </span>
+
                     </a>
+
                 </li>
 
 
-                <li class="nav-item me-3">
-                    <a class="nav-link" href="/storytypingmain">
+                <!-- STORY MODE -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="/StoryTypingMain.html">
+
                         <i class="bi bi-search"></i>
-                        <span>Story Mode</span>
+
+                        <span>
+                            Story Mode
+                        </span>
+
                     </a>
+
                 </li>
 
 
+                <!-- BLOG / ARTICLES -->
+
                 <li class="nav-item">
-                    <a class="nav-link" href="/TypingTipsMain">
+
+                    <a class="nav-link"
+                       href="/TypingTipsMain.html">
+
                         <i class="bi bi-journal-text"></i>
-                        <span>Blog / Articles</span>
+
+                        <span>
+                            Blog
+                        </span>
+
                     </a>
+
                 </li>
 
+
+                <!-- LEADERBOARD
+                     Visible for everyone -->
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/LeaderBoard">
+
+                    <a class="nav-link"
+                       href="/LeaderBoard.html">
+
                         <i class="fas fa-crown"></i>
-                        <span>Leaderboard</span>
+
+                        <span>
+                            Leaderboard
+                        </span>
+
                     </a>
+
                 </li>
-                <li class="nav-item me-3">
-                    <a class="theme-btn ms-lg-3" href="/login">
-                        Sign Up / Login
+
+
+                <!-- =================================================
+                     LOGGED-IN ONLY
+                     site.js controls visibility
+                ================================================== -->
+                <!-- MY PROGRESS -->
+
+                <li class="nav-item auth-logged-in"
+                    >
+
+                    <a class="nav-link"
+                       href="/MyProgress">
+
+                        <i class="bi bi-graph-up-arrow"></i>
+
+                        <span>
+                            My Progress
+                        </span>
+
                     </a>
+
+                </li>
+
+
+                <!-- ACCOUNT -->
+
+                <li class="nav-item auth-logged-in"
+                    >
+
+                    <a class="nav-link d-flex align-items-center gap-2"
+                       href="/MyProfile">
+
+                        <i class="bi bi-person-circle"></i>
+
+                        <span>
+                            Account
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- LOGOUT -->
+
+                <li class="nav-item auth-logged-in"
+                    >
+
+                    <a class="theme-btn ms-lg-3"
+                       href="/logout">
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+
+                <!-- =================================================
+                     LOGGED-OUT ONLY
+                     site.js controls visibility
+                ================================================== -->
+                <!-- SIGN UP / LOGIN -->
+
+                <li class="nav-item me-3 auth-logged-out">
+
+                    <a class="theme-btn ms-lg-3"
+                       href="/login">
+
+                        Sign Up / Login
+
+                    </a>
+
                 </li>
 
 
